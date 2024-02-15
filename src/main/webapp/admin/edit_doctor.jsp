@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit Doctor</title>
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
