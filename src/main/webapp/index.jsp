@@ -17,9 +17,10 @@
 
 </head>
 <body>
+
  <%@include file="component/navbar.jsp" %>
  
- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+ <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style=" margin-top: 0px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -27,13 +28,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/hos2.jpg" class="d-block w-100" alt="..." height="500px">
+      <img src="img/new7.png" class="d-block w-100" alt="..." height="800px">
     </div>
     <div class="carousel-item">
-      <img src="img/hos3.jpg" class="d-block w-100" alt="..." height="500px">
+      <img src="https://img.freepik.com/premium-photo/medical-staff-people-group-team-doctor-nurse-hospital-healthcare-medicine-ai_592076-1377.jpg?w=740" class="d-block w-100" alt="..." height="800px">
     </div>
     <div class="carousel-item">
-      <img src="img/hos4.jpg" class="d-block w-100" alt="..." height="500px">
+      <img src="img/new2.jpg" class="d-block w-100" alt="..." height="800px">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -144,6 +145,7 @@
 		</div>
 
 	</div>
+	
 	
 <%@include file="component/footer.jsp" %>
 	

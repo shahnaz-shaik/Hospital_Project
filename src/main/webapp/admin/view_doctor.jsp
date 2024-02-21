@@ -13,8 +13,16 @@
 <title>View Doctor</title>
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
+body {
+    background-image: url('https://getwallpapers.com/wallpaper/full/8/0/f/7125.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat;
+    
+   
+  }
 .paint-card {
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); 
 }
 </style>
 </head>

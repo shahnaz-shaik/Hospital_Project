@@ -1,9 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 " style="padding-top: 0.5px; padding-bottom: 0.5px; margin-top: 5px;">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.jsp"><i
-			class="fas fa-clinic-medical"></i> Hospital</a>
+		<a class="navbar-brand" href="index.jsp"><i class="fa-solid fa-house-chimney-medical"></i> MedScape</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,7 +54,17 @@
 
 				</c:if>
 
+    <script>
+      var nav = document.querySelector('nav');
 
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-dark', 'shadow');
+        } else {
+          nav.classList.remove('bg-dark', 'shadow');
+        }
+      });
+    </script>
 
 
 
