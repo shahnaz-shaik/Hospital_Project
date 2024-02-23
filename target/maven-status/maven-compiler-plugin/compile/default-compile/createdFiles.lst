@@ -1,9 +1,11 @@
 com\doctor\servlet\UpdateStatus.class
 com\doctor\servlet\DoctorLogout.class
 com\dao\AppointmentDAO.class
+com\user\servlet\AppointmentServlet.class
+com\doctor\servlet\DocotrPasswordChange.class
 com\doctor\servlet\DoctorLogin.class
 com\user\servlet\changePassword.class
 com\entity\Appointment.class
 com\user\servlet\UserLogout.class
-com\user\servlet\AppointmentServlet.class
+com\doctor\servlet\EditProfile.class
 com\user\servlet\UserLogin.class

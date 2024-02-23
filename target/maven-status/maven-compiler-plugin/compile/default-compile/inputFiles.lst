@@ -10,6 +10,7 @@ C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\admin\servlet\AddSpecialist.java
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\admin\servlet\AdminLogin.java
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\admin\servlet\AdminLogout.java
+C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\doctor\servlet\UpdateStatus.java
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\dao\UserDao.java
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\db\DBConnect.java
 C:\Users\manasi_prabhakar\eclipse-workspace\Hospital_System_2\src\main\java\com\user\servlet\UserRegister.java
