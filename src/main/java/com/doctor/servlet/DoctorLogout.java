@@ -16,7 +16,7 @@ public class DoctorLogout extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		session.removeAttribute("doctObj");
-		session.setAttribute("succMsg", "Doctor Logout Sucessfully");
+		session.setAttribute("succMsg", "Logout Sucessful");
 		resp.sendRedirect("doctor_login.jsp");
 	}
          

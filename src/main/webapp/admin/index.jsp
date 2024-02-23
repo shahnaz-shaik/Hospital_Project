@@ -1,3 +1,5 @@
+<%@page import="com.db.DBConnect"%>
+<%@page import="com.dao.DoctorDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -40,6 +42,9 @@ body {
 			<div class="fs-3 text-center text-dark" role="alert"> ${succMsg}<i class="fa-regular fa-circle-check"></i></div>
 			<c:remove var="succMsg" scope="session" />
 		</c:if>
+		<%
+		DoctorDao dao = new DoctorDao(DBConnect.getConn());
+		%>
 		
 		<div class="row">
 			<div class="col-md-4">
@@ -47,7 +52,7 @@ body {
 					<div class="card-body text-center text-dark">
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Doctor <br>5
+							Doctor <br><%=dao.countDoctor()%>
 						</p>
 					</div>
 				</div>
@@ -60,7 +65,7 @@ body {
 					<div class="card-body text-center text-dark">
 						<i class="fas fa-user-circle fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							User <br>20
+							User <br><%=dao.countUSer()%>
 						</p>
 					</div>
 				</div>
@@ -71,7 +76,7 @@ body {
 					<div class="card-body text-center text-dark">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Total Appointment <br>15
+							Total Appointment <br><%=dao.countAppointment()%>
 						</p>
 					</div>
 				</div>
@@ -84,7 +89,7 @@ body {
 					<div class="card-body text-center text-dark">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Specialist <br>5
+							Specialist <br><%=dao.countSpecialist()%>
 						</p>
 					</div>
 				</div>

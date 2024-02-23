@@ -45,10 +45,16 @@
 
 						<form action="../updateDoctor" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input type="text"
-									required name="fullname" class="form-control"
-									value="<%=d.getFullName()%>">
+								<label class="form-label">First Name</label> <input type="text"
+									required name="firstname" class="form-control"
+									value="<%=d.getFirstName()%>">
 							</div>
+							<div class="mb-3">
+								<label class="form-label">Last Name</label> <input type="text"
+									required name="lastname" class="form-control"
+									value="<%=d.getLastName()%>">
+							</div>
+							
 
 							<div class="mb-3">
 								<label class="form-label">DOB</label> <input type="date"

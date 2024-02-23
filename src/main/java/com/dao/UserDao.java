@@ -19,12 +19,13 @@ public class UserDao {
 		boolean f = false;
 
 		try {
-			String sql = "insert into user_dtls(full_name,email,password) values(?,?,?) ";
+			String sql = "insert into user_dtls(first_name,last_name,email,password) values(?,?,?,?) ";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setString(1, u.getFullName());
-			ps.setString(2, u.getEmail());
-			ps.setString(3, u.getPassword());
+			ps.setString(1, u.getFirstName());
+			ps.setString(2, u.getLastName());
+			ps.setString(3, u.getEmail());
+			ps.setString(4, u.getPassword());
 
 			int i = ps.executeUpdate();
 
@@ -55,9 +56,10 @@ public User login(String em, String psw) {
 		while (rs.next()) {
 			u = new User();
 			u.setId(rs.getInt(1));
-			u.setFullName(rs.getString(2));
-			u.setEmail(rs.getString(3));
-			u.setPassword(rs.getString(4));
+			u.setFirstName(rs.getString(2));
+			u.setLastName(rs.getString(3));
+			u.setEmail(rs.getString(4));
+			u.setPassword(rs.getString(5));
 		}
 
 	} catch (Exception e) {

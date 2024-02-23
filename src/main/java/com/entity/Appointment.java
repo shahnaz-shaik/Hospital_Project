@@ -3,7 +3,8 @@ package com.entity;
 public class Appointment {
 	private int id;
 	private int userId;
-	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String gender;
 	private String age;
 	private String appoinDate;
@@ -19,11 +20,12 @@ public class Appointment {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Appointment(int userId, String fullName, String gender, String age, String appoinDate, String email,
+	public Appointment(int userId, String firstName, String lastName, String gender, String age, String appoinDate, String email,
 			String phNo, String diseases, int doctorId, String address, String status) {
 		super();
 		this.userId = userId;
-		this.fullName = fullName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.gender = gender;
 		this.age = age;
 		this.appoinDate = appoinDate;
@@ -51,12 +53,20 @@ public class Appointment {
 		this.userId = userId;
 	}
 
-	public String getFullName() {
-		return fullName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getGender() {
