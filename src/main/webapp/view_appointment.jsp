@@ -69,12 +69,14 @@
 									Doctor d = dao2.getDoctorById(ap.getDoctorId());
 								%>
 								<tr>
-									<th><%=ap.getFullName()%></th>
+									<th><%= ap.getFirstName() + " " + ap.getLastName() %></th>
+									
 									<td><%=ap.getGender()%></td>
 									<td><%=ap.getAge()%></td>
 									<td><%=ap.getAppoinDate()%></td>
 									<td><%=ap.getDiseases()%></td>
-									<td><%=d.getFullName()%></td>
+									<td><%= d.getFirstName() + " " + d.getLastName() %></td>
+									
 									<td>
 										<%
 										if ("Pending".equals(ap.getStatus())) {

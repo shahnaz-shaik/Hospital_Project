@@ -28,7 +28,7 @@ public class changePassword extends HttpServlet {
 		if (dao.checkOldPassword(uid, oldPassword)) {
 
 			if (dao.changePassword(uid, newPassword)) {
-				session.setAttribute("succMsg", "Password Change Sucessfully");
+				session.setAttribute("succMsg", "Password changed sucessfully");
 				resp.sendRedirect("change_password.jsp");
 
 			} else {
@@ -37,7 +37,7 @@ public class changePassword extends HttpServlet {
 			}
 
 		} else {
-			session.setAttribute("errorMsg", "Old Password Incorrect");
+			session.setAttribute("errorMsg", "Incorrect old password");
 			resp.sendRedirect("change_password.jsp");
 		}
 

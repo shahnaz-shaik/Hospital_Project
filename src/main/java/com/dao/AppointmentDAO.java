@@ -22,19 +22,20 @@ public class AppointmentDAO {
 
 		try {
 
-			String sql = "insert into appointment(user_id,fullname,gender,age,appoint_date,email,phno,diseases,doctor_id,address,status) values(?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into appointment(user_id,firstname,lastname,gender,age,appoint_date,email,phno,diseases,doctor_id,address,status) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, ap.getUserId());
-			ps.setString(2, ap.getFullName());
-			ps.setString(3, ap.getGender());
-			ps.setString(4, ap.getAge());
-			ps.setString(5, ap.getAppoinDate());
-			ps.setString(6, ap.getEmail());
-			ps.setString(7, ap.getPhNo());
-			ps.setString(8, ap.getDiseases());
-			ps.setInt(9, ap.getDoctorId());
-			ps.setString(10, ap.getAddress());
-			ps.setString(11, ap.getStatus());
+			ps.setString(2, ap.getFirstName());
+			ps.setString(3, ap.getLastName());
+			ps.setString(4, ap.getGender());
+			ps.setString(5, ap.getAge());
+			ps.setString(6, ap.getAppoinDate());
+			ps.setString(7, ap.getEmail());
+			ps.setString(8, ap.getPhNo());
+			ps.setString(9, ap.getDiseases());
+			ps.setInt(10, ap.getDoctorId());
+			ps.setString(11, ap.getAddress());
+			ps.setString(12, ap.getStatus());
 
 			int i = ps.executeUpdate();
 			if (i == 1) {
@@ -63,16 +64,17 @@ public class AppointmentDAO {
 				ap = new Appointment();
 				ap.setId(rs.getInt(1));
 				ap.setUserId(rs.getInt(2));
-				ap.setFullName(rs.getString(3));
-				ap.setGender(rs.getString(4));
-				ap.setAge(rs.getString(5));
-				ap.setAppoinDate(rs.getString(6));
-				ap.setEmail(rs.getString(7));
-				ap.setPhNo(rs.getString(8));
-				ap.setDiseases(rs.getString(9));
-				ap.setDoctorId(rs.getInt(10));
-				ap.setAddress(rs.getString(11));
-				ap.setStatus(rs.getString(12));
+				ap.setFirstName(rs.getString(3));
+				ap.setLastName(rs.getString(4));
+				ap.setGender(rs.getString(5));
+				ap.setAge(rs.getString(6));
+				ap.setAppoinDate(rs.getString(7));
+				ap.setEmail(rs.getString(8));
+				ap.setPhNo(rs.getString(9));
+				ap.setDiseases(rs.getString(10));
+				ap.setDoctorId(rs.getInt(11));
+				ap.setAddress(rs.getString(12));
+				ap.setStatus(rs.getString(13));
 				list.add(ap);
 			}
 
@@ -98,16 +100,17 @@ public class AppointmentDAO {
 				ap = new Appointment();
 				ap.setId(rs.getInt(1));
 				ap.setUserId(rs.getInt(2));
-				ap.setFullName(rs.getString(3));
-				ap.setGender(rs.getString(4));
-				ap.setAge(rs.getString(5));
-				ap.setAppoinDate(rs.getString(6));
-				ap.setEmail(rs.getString(7));
-				ap.setPhNo(rs.getString(8));
-				ap.setDiseases(rs.getString(9));
-				ap.setDoctorId(rs.getInt(10));
-				ap.setAddress(rs.getString(11));
-				ap.setStatus(rs.getString(12));
+				ap.setFirstName(rs.getString(3));
+				ap.setLastName(rs.getString(4));
+				ap.setGender(rs.getString(5));
+				ap.setAge(rs.getString(6));
+				ap.setAppoinDate(rs.getString(7));
+				ap.setEmail(rs.getString(8));
+				ap.setPhNo(rs.getString(9));
+				ap.setDiseases(rs.getString(10));
+				ap.setDoctorId(rs.getInt(11));
+				ap.setAddress(rs.getString(12));
+				ap.setStatus(rs.getString(13));
 				list.add(ap);
 			}
 
@@ -133,16 +136,17 @@ public class AppointmentDAO {
 				ap = new Appointment();
 				ap.setId(rs.getInt(1));
 				ap.setUserId(rs.getInt(2));
-				ap.setFullName(rs.getString(3));
-				ap.setGender(rs.getString(4));
-				ap.setAge(rs.getString(5));
-				ap.setAppoinDate(rs.getString(6));
-				ap.setEmail(rs.getString(7));
-				ap.setPhNo(rs.getString(8));
-				ap.setDiseases(rs.getString(9));
-				ap.setDoctorId(rs.getInt(10));
-				ap.setAddress(rs.getString(11));
-				ap.setStatus(rs.getString(12));
+				ap.setFirstName(rs.getString(3));
+				ap.setLastName(rs.getString(4));
+				ap.setGender(rs.getString(5));
+				ap.setAge(rs.getString(6));
+				ap.setAppoinDate(rs.getString(7));
+				ap.setEmail(rs.getString(8));
+				ap.setPhNo(rs.getString(9));
+				ap.setDiseases(rs.getString(10));
+				ap.setDoctorId(rs.getInt(11));
+				ap.setAddress(rs.getString(12));
+				ap.setStatus(rs.getString(13));
 
 			}
 
@@ -188,16 +192,17 @@ public class AppointmentDAO {
 				ap = new Appointment();
 				ap.setId(rs.getInt(1));
 				ap.setUserId(rs.getInt(2));
-				ap.setFullName(rs.getString(3));
-				ap.setGender(rs.getString(4));
-				ap.setAge(rs.getString(5));
-				ap.setAppoinDate(rs.getString(6));
-				ap.setEmail(rs.getString(7));
-				ap.setPhNo(rs.getString(8));
-				ap.setDiseases(rs.getString(9));
-				ap.setDoctorId(rs.getInt(10));
-				ap.setAddress(rs.getString(11));
-				ap.setStatus(rs.getString(12));
+				ap.setFirstName(rs.getString(3));
+				ap.setLastName(rs.getString(4));
+				ap.setGender(rs.getString(5));
+				ap.setAge(rs.getString(6));
+				ap.setAppoinDate(rs.getString(7));
+				ap.setEmail(rs.getString(8));
+				ap.setPhNo(rs.getString(9));
+				ap.setDiseases(rs.getString(10));
+				ap.setDoctorId(rs.getInt(11));
+				ap.setAddress(rs.getString(12));
+				ap.setStatus(rs.getString(13));
 				list.add(ap);
 			}
 

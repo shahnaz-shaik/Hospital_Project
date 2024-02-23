@@ -71,8 +71,12 @@ body {
 							<input type="hidden" name="userid" value="${userObj.id }">
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Full Name</label> <input
-									required type="text" class="form-control" name="fullname">
+								<label for="inputEmail4" class="form-label">First Name</label> <input
+									required type="text" class="form-control" name="firstname">
+							</div>
+							<div class="col-md-6">
+								<label for="inputEmail4" class="form-label">Last Name</label> <input
+									required type="text" class="form-control" name="lastname">
 							</div>
 
 							<div class="col-md-6">
@@ -122,7 +126,7 @@ body {
 									List<Doctor> list = dao.getAllDoctor();
 									for (Doctor d : list) {
 									%>
-									<option value="<%=d.getId()%>"><%=d.getFullName()%> (<%=d.getSpecialist()%>)
+									<option value="<%=d.getId()%>"><%=d.getFirstName()%> (<%=d.getSpecialist()%>)
 									</option>
 									<%
 									}

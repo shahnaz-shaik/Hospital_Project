@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>User Registration</title>
 <%@include file="component/allcss.jsp"%>
 <style type="text/css">
 body {
@@ -43,8 +43,12 @@ body {
 
 						<form action="user_register" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input required
-									name="fullname" type="text" class="form-control">
+								<label class="form-label">First Name</label> <input required
+									name="firstname" type="text" class="form-control">
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Last Name</label> <input required
+									name="lastname" type="text" class="form-control">
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Email address</label> <input required

@@ -21,23 +21,22 @@ public class AddDoctor extends HttpServlet {
 
 		try {
 
-			String fullName = req.getParameter("fullname");
+			String firstName = req.getParameter("firstname");
+			String lastName = req.getParameter("lastname");
 			String dob = req.getParameter("dob");
 			String qualification = req.getParameter("qualification");
-
 			String spec = req.getParameter("spec");
-
 			String email = req.getParameter("email");
 			String mobno = req.getParameter("mobno");
 			String password = req.getParameter("password");
 
-			Doctor d = new Doctor(fullName, dob, qualification, spec, email, mobno, password);
+			Doctor d = new Doctor(firstName, lastName, dob, qualification, spec, email, mobno, password);
 
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
 			HttpSession session = req.getSession();
 
 			if (dao.registerDoctor(d)) {
-				session.setAttribute("succMsg", "Doctor Added Sucessfully..");
+				session.setAttribute("succMsg", "Doctor added sucessfully..");
 				resp.sendRedirect("admin/doctor.jsp");
 			} else {
 				session.setAttribute("errorMsg", "something wrong on server");

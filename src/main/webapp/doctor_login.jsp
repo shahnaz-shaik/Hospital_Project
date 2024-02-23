@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Doctor login page</title>
+<title>Doctor login</title>
 <%@include file="component/allcss.jsp" %>
 <style type="text/css">
 body {

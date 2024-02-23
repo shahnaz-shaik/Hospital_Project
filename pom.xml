@@ -52,11 +52,7 @@
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
             <configuration>
-<<<<<<< HEAD
-                <port>1238</port>
-=======
-                <port>1331</port>
->>>>>>> d329bd5a43354cdd2367a8e956a0d6b65c0fe1d8
+                <port>1221</port>
                 <path>/</path>
             </configuration>
         </plugin>

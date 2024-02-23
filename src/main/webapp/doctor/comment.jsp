@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add comment</title>
 <style type="text/css">
 .paint-card{
 box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -51,7 +51,12 @@ box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.3);
 						<form class="row" action="../updateStatus" method="post">
 							<div class="col-md-6">
 								<label>Patient Name</label> <input type="text" readonly
-									value="<%=ap.getFullName()%>" class="form-control">
+									value="<%=ap.getFirstName()%>" class="form-control">
+									
+							</div>
+							<div class="col-md-6">
+								<label>Patient Name</label> <input type="text" readonly
+									value="<%=ap.getLastName()%>" class="form-control">
 							</div>
 
 							<div class="col-md-6">

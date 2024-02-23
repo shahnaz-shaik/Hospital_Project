@@ -47,7 +47,8 @@ body {
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
+									<th scope="col">First Name</th>
+								  	<th scope="col">Last Name</th>
 									<th scope="col">DOB</th>
 									<th scope="col">Qualification</th>
 									<th scope="col">Specialist</th>
@@ -63,7 +64,8 @@ body {
 								for (Doctor d : list2) {
 								%>
 								<tr>
-									<td><%=d.getFullName()%></td>
+									<td><%=d.getFirstName()%></td>
+									<td><%=d.getLastName()%></td>
 									<td><%=d.getDob()%></td>
 									<td><%=d.getQualification()%></td>
 									<td><%=d.getSpecialist()%></td>
