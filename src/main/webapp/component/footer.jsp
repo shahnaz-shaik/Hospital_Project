@@ -1,3 +1,4 @@
-<div class="container-fluid p-1 bg-info text-center text-white">
+
+<div class="container-fluid p-2 bg-dark text-center text-white">
 	<p>@copyright hospital.com</p>
 </div>

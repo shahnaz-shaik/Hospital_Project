@@ -7,6 +7,13 @@
 <title>Doctor login page</title>
 <%@include file="component/allcss.jsp" %>
 <style type="text/css">
+body {
+    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat;
+   /* Do not repeat the background image */
+  }
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -49,7 +56,7 @@
 								<label class="form-label">Password</label> <input required
 									name="password" type="password" class="form-control">
 							</div>
-							<button type="submit" class="btn bg-info text-white col-md-12">Login</button>
+							<button type="submit" class="btn bg-dark text-white col-md-12">Login</button>
 						</form>
 					
 					</div>

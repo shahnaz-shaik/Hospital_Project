@@ -20,18 +20,26 @@ response.setDateHeader("Expires", 0);
 <title>User Appointment</title>
 <%@include file="component/allcss.jsp"%>
 <style type="text/css">
+
+body {
+    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat;
+   /* Do not repeat the background image */
+  }
 .paint-card {
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.backImg {
+/* .backImg {
 	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
-		url("img/hos2.jpg");
+		url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true');
 	height:20vh;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
+} */
 </style>
 </head>
 <body>
@@ -42,10 +50,10 @@ response.setDateHeader("Expires", 0);
 	</div>
 	<div class="container p-3">
 		<div class="row">
-			<div class="col-md-6 p-5">
+			<!-- <div class="col-md-6 p-5">
 				<img alt="" src="img/doc1.jpg">
 			</div>
-
+ -->
 			<div class="col-md-6">
 				<div class="card paint-card">
 					<div class="card-body">
@@ -133,11 +141,11 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<c:if test="${empty userObj }">
-								<a href="user_login.jsp" class="col-md-6 offset-md-3 btn btn-success">Submit</a>
+								<a href="user_login.jsp" class="col-md-6 offset-md-3 btn btn-dark">Submit</a>
 							</c:if>
 
 							<c:if test="${not empty userObj }">
-								<button class="col-md-6 offset-md-3 btn btn-info">Submit</button>
+								<button class="col-md-6 offset-md-3 btn btn-dark">Submit</button>
 							</c:if>
 						</form>
 					</div>

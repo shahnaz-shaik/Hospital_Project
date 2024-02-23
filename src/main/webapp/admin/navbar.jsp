@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.jsp"><i
 			class="fas fa-clinic-medical"></i> Hospital</a>
