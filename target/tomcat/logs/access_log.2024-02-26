@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:26 +0530] "GET / HTTP/1.1" 200 7090 http-bio-1182-exec-2 1341
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:27 +0530] "GET /img/new7.png HTTP/1.1" 200 600042 http-bio-1182-exec-3 435
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:27 +0530] "GET /img/doc1.jpg HTTP/1.1" 200 288587 http-bio-1182-exec-6 33
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:27 +0530] "GET /img/doc2.jpg HTTP/1.1" 200 44376 http-bio-1182-exec-7 35
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:27 +0530] "GET /img/doc3.jpg HTTP/1.1" 200 24500 http-bio-1182-exec-8 59
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:27 +0530] "GET /img/doc4.jpg HTTP/1.1" 200 21970 http-bio-1182-exec-5 66
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:28 +0530] "GET /img/hos7.jpg HTTP/1.1" 200 3522179 http-bio-1182-exec-1 599
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:28 +0530] "GET /img/new2.jpg HTTP/1.1" 200 1742184 http-bio-1182-exec-4 941
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:28 +0530] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-1182-exec-4 1
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:41 +0530] "GET /admin_login.jsp HTTP/1.1" 200 3746 http-bio-1182-exec-4 512
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:13:52 +0530] "GET /user_login.jsp HTTP/1.1" 200 3862 http-bio-1182-exec-4 134
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:08 +0530] "GET /signup.jsp HTTP/1.1" 200 3944 http-bio-1182-exec-4 95
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:36 +0530] "POST /user_register HTTP/1.1" 302 - http-bio-1182-exec-4 1931
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:36 +0530] "GET /signup.jsp HTTP/1.1" 200 4032 http-bio-1182-exec-4 7
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:47 +0530] "GET /user_login.jsp HTTP/1.1" 200 3862 http-bio-1182-exec-4 5
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:58 +0530] "POST /userLogin HTTP/1.1" 302 - http-bio-1182-exec-4 30
+0:0:0:0:0:0:0:1 - - [26/Feb/2024:11:14:58 +0530] "GET /index.jsp HTTP/1.1" 200 7361 http-bio-1182-exec-4 8
