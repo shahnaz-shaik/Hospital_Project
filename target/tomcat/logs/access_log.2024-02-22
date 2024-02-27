@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:52 +0530] "GET / HTTP/1.1" 200 6529 http-bio-1321-exec-2 325
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:54 +0530] "GET /img/hos2.jpg HTTP/1.1" 200 25007 http-bio-1321-exec-3 1702
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/hos3.jpg HTTP/1.1" 200 19326 http-bio-1321-exec-1 2291
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/doc2.jpg HTTP/1.1" 200 44376 http-bio-1321-exec-8 259
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/doc4.jpg HTTP/1.1" 200 21970 http-bio-1321-exec-6 273
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/doc3.jpg HTTP/1.1" 200 24500 http-bio-1321-exec-9 289
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/hos4.jpg HTTP/1.1" 200 21606 http-bio-1321-exec-5 300
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:55 +0530] "GET /img/doc1.jpg HTTP/1.1" 200 288587 http-bio-1321-exec-7 308
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:57 +0530] "GET /img/hos7.jpg HTTP/1.1" 200 3522179 http-bio-1321-exec-4 2315
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:58 +0530] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-1321-exec-2 1
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:10:59 +0530] "GET /doctor_login.jsp HTTP/1.1" 200 2945 http-bio-1321-exec-2 27
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:11:10 +0530] "POST /doctorLogin HTTP/1.1" 302 - http-bio-1321-exec-2 713
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:11:10 +0530] "GET /doctor/index.jsp HTTP/1.1" 200 2912 http-bio-1321-exec-2 765
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:11:59 +0530] "GET /doctor/index.jsp HTTP/1.1" 200 2912 http-bio-1321-exec-2 22
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:12:01 +0530] "GET /doctor/index.jsp HTTP/1.1" 200 2912 http-bio-1321-exec-2 35
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:12:45 +0530] "GET /doctor/patient.jsp HTTP/1.1" 200 3515 http-bio-1321-exec-2 85
+0:0:0:0:0:0:0:1 - - [22/Feb/2024:12:12:46 +0530] "GET /doctor/index.jsp HTTP/1.1" 200 2912 http-bio-1321-exec-2 41
