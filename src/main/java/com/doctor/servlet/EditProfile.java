@@ -21,7 +21,8 @@ public class EditProfile extends HttpServlet {
 
 		try {
 
-			String fullName = req.getParameter("fullname");
+			String firstName = req.getParameter("firstname");
+			String lastName = req.getParameter("lastname");
 			String dob = req.getParameter("dob");
 			String qualification = req.getParameter("qualification");
 			String spec = req.getParameter("spec");
@@ -30,7 +31,7 @@ public class EditProfile extends HttpServlet {
 
 			int id = Integer.parseInt(req.getParameter("id"));
 
-			Doctor d = new Doctor(id, fullName, dob, qualification, spec, email, mobno, "");
+			Doctor d = new Doctor(id, firstName,lastName, dob, qualification, spec, email, mobno, "");
 
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
 			HttpSession session = req.getSession();
