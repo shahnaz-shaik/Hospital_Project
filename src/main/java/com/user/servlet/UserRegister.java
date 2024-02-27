@@ -22,11 +22,12 @@ public class UserRegister extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
-			String fullName = req.getParameter("fullname");
+			String firstName = req.getParameter("firstname");
+			String lastName = req.getParameter("lastname");
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
 
-			User u = new User(fullName, email, password);
+			User u = new User(firstName ,lastName, email, password);
 
 			UserDao dao = new UserDao(DBConnect.getConn());
 

@@ -42,8 +42,12 @@ body {
 						</c:if>
 						<form action="../addDoctor" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input type="text"
-									required name="fullname" class="form-control">
+								<label class="form-label">First Name</label> <input type="text"
+									required name="firstname" class="form-control">
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Last Name</label> <input type="text"
+									required name="lastname" class="form-control">
 							</div>
 
 							<div class="mb-3">

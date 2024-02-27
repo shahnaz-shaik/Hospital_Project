@@ -49,10 +49,12 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
+									<th scope="col">First Name</th>
+									<th scope="col">Last Name</th>
 									<th scope="col">Gender</th>
 									<th scope="col">Age</th>
 									<th scope="col">Appoint Date</th>
+									<th scope="col">Appoint Time</th>
 									<th scope="col">Diseases</th>
 									<th scope="col">Doctor Name</th>
 									<th scope="col">Status</th>
@@ -69,12 +71,15 @@
 									Doctor d = dao2.getDoctorById(ap.getDoctorId());
 								%>
 								<tr>
-									<th><%=ap.getFullName()%></th>
+									<th><%=ap.getFirstName()%></th>
+									<th><%=ap.getLastName()%></th>
 									<td><%=ap.getGender()%></td>
 									<td><%=ap.getAge()%></td>
 									<td><%=ap.getAppoinDate()%></td>
+									<td><%=ap.getAppoinTime()%></td>
 									<td><%=ap.getDiseases()%></td>
-									<td><%=d.getFullName()%></td>
+									<td><%=d.getFirstName()%> <%=d.getLastName()%></td>
+									
 									<td>
 										<%
 										if ("Pending".equals(ap.getStatus())) {

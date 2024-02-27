@@ -50,8 +50,12 @@ box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.3);
 						%>
 						<form class="row" action="../updateStatus" method="post">
 							<div class="col-md-6">
-								<label>Patient Name</label> <input type="text" readonly
-									value="<%=ap.getFullName()%>" class="form-control">
+								<label>Patient First Name</label> <input type="text" readonly
+									value="<%=ap.getFirstName()%>" class="form-control">
+							</div>
+							<div class="col-md-6">
+								<label>Patient Last Name</label> <input type="text" readonly
+									value="<%=ap.getLastName()%>" class="form-control">
 							</div>
 
 							<div class="col-md-6">

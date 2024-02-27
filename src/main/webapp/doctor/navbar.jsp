@@ -21,7 +21,7 @@
 					<button class="btn btn-light dropdown-toggle" type="button"
 						id="dropdownMenuButton1" data-bs-toggle="dropdown"
 						aria-expanded="false">
-						<i class="fas fa-user-circle"></i> ${doctObj.fullName }
+						<i class="fas fa-user-circle"></i> ${doctObj.firstName }
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						<li><a class="dropdown-item" href="edit_profile.jsp">Edit

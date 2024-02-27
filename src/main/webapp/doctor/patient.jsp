@@ -45,7 +45,8 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
+									<th scope="col">First Name</th>
+									<th scope="col">Last Name</th>
 									<th scope="col">Gender</th>
 									<th scope="col">Age</th>
 									<th scope="col">Appointment Date</th>
@@ -64,7 +65,8 @@
 								for (Appointment ap : list) {
 								%>
 								<tr>
-									<th><%=ap.getFullName()%></th>
+									<th><%=ap.getFirstName()%></th>
+									<th><%=ap.getLastName()%></th>
 									<td><%=ap.getGender()%></td>
 									<td><%=ap.getAge()%></td>
 									<td><%=ap.getAppoinDate()%></td>

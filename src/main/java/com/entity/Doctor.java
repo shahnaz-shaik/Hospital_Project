@@ -3,7 +3,8 @@ package com.entity;
 public class Doctor {
 
 	private int id;
-	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String dob;
 	private String qualification;
 	private String specialist;
@@ -16,10 +17,11 @@ public class Doctor {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Doctor(String fullName, String dob, String qualification, String specialist, String email, String mobNo,
+	public Doctor(String firstName,String lastName, String dob, String qualification, String specialist, String email, String mobNo,
 			String password) {
 		super();
-		this.fullName = fullName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.dob = dob;
 		this.qualification = qualification;
 		this.specialist = specialist;
@@ -28,11 +30,12 @@ public class Doctor {
 		this.password = password;
 	}
 
-	public Doctor(int id, String fullName, String dob, String qualification, String specialist, String email,
+	public Doctor(int id, String firstName,String lastName, String dob, String qualification, String specialist, String email,
 			String mobNo, String password) {
 		super();
 		this.id = id;
-		this.fullName = fullName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.dob = dob;
 		this.qualification = qualification;
 		this.specialist = specialist;
@@ -49,12 +52,19 @@ public class Doctor {
 		this.id = id;
 	}
 
-	public String getFullName() {
-		return fullName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getDob() {

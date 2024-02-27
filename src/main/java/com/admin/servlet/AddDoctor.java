@@ -21,7 +21,8 @@ public class AddDoctor extends HttpServlet {
 
 		try {
 
-			String fullName = req.getParameter("fullname");
+			String firstName = req.getParameter("firstname");
+			String lastName = req.getParameter("lastname");
 			String dob = req.getParameter("dob");
 			String qualification = req.getParameter("qualification");
 
@@ -31,7 +32,7 @@ public class AddDoctor extends HttpServlet {
 			String mobno = req.getParameter("mobno");
 			String password = req.getParameter("password");
 
-			Doctor d = new Doctor(fullName, dob, qualification, spec, email, mobno, password);
+			Doctor d = new Doctor(firstName,lastName, dob, qualification, spec, email, mobno, password);
 
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
 			HttpSession session = req.getSession();
