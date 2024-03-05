@@ -56,9 +56,12 @@ body {
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Password</label> <input required
-									name="password" type="password" class="form-control">
-							</div>
+    <label class="form-label">Password </label> 
+    <input required name="password" type="password" class="form-control" 
+           pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+           title="Password must be at least 8 characters long and contain at least one letter, one number, and one special character">
+</div>
+
 
 							<button type="submit" class="btn bg-dark text-white col-md-12">Register</button>
 						</form>

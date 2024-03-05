@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,9 +40,13 @@ public class AddDoctor extends HttpServlet {
 
 			if (dao.registerDoctor(d)) {
 				session.setAttribute("succMsg", "Doctor Added Sucessfully..");
-				resp.sendRedirect("admin/doctor.jsp");
+				PrintWriter out= resp.getWriter();
+				out.println("added doc");
+				/* resp.sendRedirect("admin/doctor.jsp"); */
 			} else {
 				session.setAttribute("errorMsg", "something wrong on server");
+				PrintWriter out= resp.getWriter();
+				out.println("added not doc");
 				resp.sendRedirect("admin/doctor.jsp");
 			}
 

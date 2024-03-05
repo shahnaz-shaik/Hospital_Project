@@ -29,6 +29,7 @@ public class AdminLogin extends HttpServlet {
 			} else {
 				session.setAttribute("errorMsg", "Invalid Email or Password");
 				resp.sendRedirect("admin_login.jsp");
+			
 			}
 
 		} catch (Exception e) {

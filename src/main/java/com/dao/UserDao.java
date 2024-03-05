@@ -3,7 +3,11 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.db.DBConnect;
+import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDao {
@@ -13,6 +17,15 @@ public class UserDao {
 	public UserDao(Connection conn) {
 		super();
 		this.conn = conn;
+	}
+
+	private void storeVerificationCode(String email, String verificationCode) {
+	    // Implement logic to store verification code in the database
+	    // You need to have a database table to store email and verification code
+	    // Perform appropriate database operations using JDBC or your ORM framework
+	    // For demonstration purposes, we'll assume the existence of a method in UserDao to store the code
+	    UserDao userDao = new UserDao(DBConnect.getConn());
+	    userDao.storeVerificationCode(email, verificationCode);
 	}
 
 	public boolean register(User u) {
@@ -39,7 +52,30 @@ public class UserDao {
 
 		return f;
 	}
+	public List<User> getAllUser() {
+		List<User> list = new ArrayList<User>();
+		User u = null;
+		try {
 
+			String sql = "select * from user_dtls order by id";
+			PreparedStatement ps = conn.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				u = new User();
+				u.setId(rs.getInt(1));
+				u.setFirstName(rs.getString(2));
+				u.setLastName(rs.getString(3));
+				u.setEmail(rs.getString(4));
+				
+				list.add(u);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 
 
 public User login(String em, String psw) {

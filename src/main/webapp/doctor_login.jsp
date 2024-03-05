@@ -8,11 +8,11 @@
 <%@include file="component/allcss.jsp" %>
 <style type="text/css">
 body {
-    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background image */
+    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true');
+    background-size: cover; 
+    background-position: center;
     background-repeat: repeat;
-   /* Do not repeat the background image */
+   
   }
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);

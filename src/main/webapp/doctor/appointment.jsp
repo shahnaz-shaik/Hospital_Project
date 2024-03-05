@@ -1,0 +1,103 @@
+
+<%@page import="com.entity.Doctor"%>
+<%@page import="com.dao.DoctorDao"%>
+<%@page import="com.entity.Appointment"%>
+<%@page import="java.util.List"%>
+<%@page import="com.db.DBConnect"%>
+<%@page import="com.dao.AppointmentDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View Appointment</title>
+<%@include file="../component/allcss.jsp"%>
+<style type="text/css">
+.paint-card {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.backImg {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+        url("img/hos3.jpg");
+    height: 20vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+    <%-- Get the email from request parameter --%>
+    <% String email = request.getParameter("email"); %>
+    <%-- Ensure the email is not empty --%>
+    <c:if test="${not empty email}">
+        <%@include file="navbar.jsp"%>
+
+        <div class="container-fulid backImg p-5">
+            <p class="text-center fs-2 text-white"></p>
+        </div>
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card paint-card">
+                        <div class="card-body">
+                            <p class="fs-4 fw-bold text-center text-info">Appointment
+                                List</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">Appoint Date</th>
+                                        <th scope="col">Appoint Time</th>
+                                        <th scope="col">Diseases</th>
+                                        <th scope="col">Doctor Name</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%-- Retrieve appointments by email --%>
+                                    <%
+                                    AppointmentDAO dao = new AppointmentDAO(DBConnect.getConn());
+                                    DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
+                                    List<Appointment> list = dao.getAllAppointmentByEmail(email);
+                                    for (Appointment ap : list) {
+                                        Doctor d = dao2.getDoctorById(ap.getDoctorId());
+                                    %>
+                                    <tr>
+                                        <th><%=ap.getFirstName()%></th>
+                                        <th><%=ap.getLastName()%></th>
+                                        <td><%=ap.getGender()%></td>
+                                        <td><%=ap.getAge()%></td>
+                                        <td><%=ap.getAppoinDate()%></td>
+                                        <td><%=ap.getAppoinTime()%></td>
+                                        <td><%=ap.getDiseases()%></td>
+                                        <td><%=d.getFirstName()%> <%=d.getLastName()%></td>
+                                        <td>
+                                            <% if ("Pending".equals(ap.getStatus())) { %>
+                                                <a href="#" class="btn btn-sm btn-warning">Pending</a>
+                                            <% } else { %>
+                                                <%=ap.getStatus()%>
+                                            <% } %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-3">
+                    <img alt="" src="img/doc2.jpg" style="width: 400px; height: 400px;">
+                </div>
+            </div>
+        </div>
+    </c:if>
+</body>
+</html>

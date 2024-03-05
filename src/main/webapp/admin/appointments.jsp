@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>view patient</title>
+<title>view appointments</title>
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 body {
@@ -32,7 +32,7 @@ body {
 	<div class="col-md-12">
 		<div class="card paint-card">
 			<div class="card-body">
-				<p class="fs-3 text-center">Patient Details</p>
+				<p class="fs-3 text-center">Appointment Details</p>
 				<table class="table">
 					<thead>
 						<tr>

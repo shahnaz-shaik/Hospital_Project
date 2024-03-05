@@ -45,8 +45,9 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">First Name</th>
-									<th scope="col">Last Name</th>
+								<th scope="col">ID</th>
+									<th scope="col">Name</th>
+									<!-- <th scope="col">Last Name</th> -->
 									<th scope="col">Gender</th>
 									<th scope="col">Age</th>
 									<th scope="col">Appointment Date</th>
@@ -65,12 +66,14 @@
 								for (Appointment ap : list) {
 								%>
 								<tr>
-									<th><%=ap.getFirstName()%></th>
-									<th><%=ap.getLastName()%></th>
+								<td><a href="appointment.jsp?id=<%=ap.getId()%>"><%=ap.getId()%></td>
+									<th><%=ap.getFirstName()%> <%=ap.getLastName()%> </a></th>
+								<%-- 	<th><%=ap.getLastName()%></th> --%>
 									<td><%=ap.getGender()%></td>
 									<td><%=ap.getAge()%></td>
 									<td><%=ap.getAppoinDate()%></td>
-									<td><%=ap.getEmail()%></td>
+									<td><%=ap.getEmail()%></a></td>
+
 									<td><%=ap.getPhNo()%></td>
 									<td><%=ap.getDiseases()%></td>
 									<td><%=ap.getStatus()%></td>

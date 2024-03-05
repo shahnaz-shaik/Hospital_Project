@@ -28,7 +28,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/new7.png" class="d-block w-100" alt="..." height="800px">
+      <img src="img/new7.png  " class="d-block w-100" alt="..."  height="800px">
     </div>
     <div class="carousel-item">
       <img src="https://img.freepik.com/premium-photo/medical-staff-people-group-team-doctor-nurse-hospital-healthcare-medicine-ai_592076-1377.jpg?w=740" class="d-block w-100" alt="..." height="800px">

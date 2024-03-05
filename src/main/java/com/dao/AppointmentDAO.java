@@ -49,6 +49,44 @@ public class AppointmentDAO {
 
 		return f;
 	}
+	 public List<Appointment> getAllAppointmentByEmail(String email) {
+	        List<Appointment> appointments = new ArrayList<Appointment>();
+	      
+	        Appointment ap = null;
+
+	        try {
+
+				String sql = "select * from appointment where email=?";
+				PreparedStatement ps = conn.prepareStatement(sql);
+				ps.setString(1,email);
+
+				ResultSet rs = ps.executeQuery();
+				while (rs.next()) {
+					ap = new Appointment();
+					ap.setId(rs.getInt(1));
+					ap.setUserId(rs.getInt(2));
+					ap.setFirstName(rs.getString(3));
+					ap.setLastName(rs.getString(4));
+					ap.setGender(rs.getString(5));
+					ap.setAge(rs.getString(6));
+					ap.setAppoinDate(rs.getString(7));
+					ap.setAppoinTime(rs.getString(8));
+					ap.setEmail(rs.getString(9));
+					ap.setPhNo(rs.getString(10));
+					ap.setDiseases(rs.getString(11));
+					ap.setDoctorId(rs.getInt(12));
+					ap.setAddress(rs.getString(13));
+					ap.setStatus(rs.getString(14));
+					appointments.add(ap);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			return appointments;   
+	        
+	 }
 
 	public List<Appointment> getAllAppointmentByLoginUser(int userId) {
 		List<Appointment> list = new ArrayList<Appointment>();
