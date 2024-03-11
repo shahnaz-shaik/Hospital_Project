@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,10 +40,17 @@ public class UpdateDoctor extends HttpServlet {
 
 			if (dao.updateDoctor(d)) {
 				session.setAttribute("succMsg", "Doctor Update Sucessfully..");
-				resp.sendRedirect("admin/view_doctor.jsp");
+				 resp.sendRedirect("admin/view_doctor.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter(); out.println("Doctor Details Updated");
+					 */
 			} else {
 				session.setAttribute("errorMsg", "something wrong on server");
-				resp.sendRedirect("admin/view_doctor.jsp");
+				 resp.sendRedirect("admin/view_doctor.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Error Encountered while updating doctor details");
+					 */
 			}
 
 		} catch (Exception e) {

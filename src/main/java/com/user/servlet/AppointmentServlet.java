@@ -1,6 +1,7 @@
 package com.user.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,11 +40,18 @@ public class AppointmentServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 
 		if (dao.addAppointment(ap)) {
-			session.setAttribute("succMsg", "Appointment Sucessfully");
-			resp.sendRedirect("user_appointment.jsp");
+			session.setAttribute("succMsg", "Appointment Sucessfull");
+			 resp.sendRedirect("user_appointment.jsp"); 
+			/*
+			 * PrintWriter out= resp.getWriter(); out.println("Appointment Successfull");
+			 */
 		} else {
 			session.setAttribute("errorMsg", "Something wrong on server");
-			resp.sendRedirect("user_appointment.jsp");
+			 resp.sendRedirect("user_appointment.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter();
+				 * out.println("Something went wrong while booking appointment");
+				 */
 		}
 
 	}

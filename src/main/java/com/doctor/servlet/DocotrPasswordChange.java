@@ -1,6 +1,7 @@
 package com.doctor.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,16 +29,27 @@ public class DocotrPasswordChange extends HttpServlet {
 
 			if (dao.changePassword(uid, newPassword)) {
 				session.setAttribute("succMsg", "Password Change Sucessfully");
-				resp.sendRedirect("doctor/edit_profile.jsp");
+				 resp.sendRedirect("doctor/edit_profile.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter();
+				 * out.println("Password changed Successfully");
+				 */
 
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");
-				resp.sendRedirect("doctor/edit_profile.jsp");
+				 resp.sendRedirect("doctor/edit_profile.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Error encountered while changing password");
+					 */
 			}
 
 		} else {
 			session.setAttribute("errorMsg", "Old Password Incorrect");
-			resp.sendRedirect("doctor/edit_profile.jsp");
+			 resp.sendRedirect("doctor/edit_profile.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Old Password Incorrect ");
+				 */
 		}
 
 	}

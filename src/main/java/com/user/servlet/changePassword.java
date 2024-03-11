@@ -1,6 +1,7 @@
 package com.user.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,16 +30,27 @@ public class changePassword extends HttpServlet {
 
 			if (dao.changePassword(uid, newPassword)) {
 				session.setAttribute("succMsg", "Password Change Sucessfully");
-				resp.sendRedirect("change_password.jsp");
+				 resp.sendRedirect("change_password.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Password Changed Successfully");
+					 */
 
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");
-				resp.sendRedirect("change_password.jsp");
+				 resp.sendRedirect("change_password.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Error encountered while changing password");
+					 */
 			}
 
 		} else {
 			session.setAttribute("errorMsg", "Old Password Incorrect");
-			resp.sendRedirect("change_password.jsp");
+			 resp.sendRedirect("change_password.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Incorrect Old password");
+				 */
 		}
 
 	}

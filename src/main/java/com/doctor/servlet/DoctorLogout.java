@@ -1,6 +1,7 @@
 package com.doctor.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,10 @@ public class DoctorLogout extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.removeAttribute("doctObj");
 		session.setAttribute("succMsg", "Doctor Logout Sucessfully");
-		resp.sendRedirect("doctor_login.jsp");
+		 resp.sendRedirect("doctor_login.jsp"); 
+			/*
+			 * PrintWriter out= resp.getWriter(); out.println("Logout Successfull");
+			 */
 	}
          
 }

@@ -1,6 +1,7 @@
 package com.user.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,10 @@ public class UserLogout extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.removeAttribute("userObj");
 		session.setAttribute("succMsg", "User Logout Sucessfully");
-		resp.sendRedirect("user_login.jsp");
+		 resp.sendRedirect("user_login.jsp"); 
+			/*
+			 * PrintWriter out= resp.getWriter(); out.println("Logout Successful");
+			 */
 
 	}
 

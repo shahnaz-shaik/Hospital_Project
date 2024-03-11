@@ -1,6 +1,7 @@
 package com.user.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,10 +29,16 @@ public class UserLogin extends HttpServlet {
 
 		if (user != null) {
 			session.setAttribute("userObj", user);
-			resp.sendRedirect("index.jsp");
+			 resp.sendRedirect("index.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Login Successful");
+				 */
 		} else {
 			session.setAttribute("errorMsg", "invalid email or password");
-			resp.sendRedirect("user_login.jsp");
+			 resp.sendRedirect("user_login.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Invalid Email or password");
+				 */
 		}
 
 	}

@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,11 +25,19 @@ public class DeleteDoctor extends HttpServlet {
 		HttpSession session = req.getSession();
 
 		if (dao.deleteDoctor(id)) {
-			session.setAttribute("succMsg", "Doctor Delete Sucessfully..");
-			resp.sendRedirect("admin/view_doctor.jsp");
+			session.setAttribute("succMsg", "Doctor Deleted Sucessfully..");
+			 resp.sendRedirect("admin/view_doctor.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter();
+				 * out.println("Doctor deleted successfully");
+				 */
 		} else {
 			session.setAttribute("errorMsg", "something wrong on server");
-			resp.sendRedirect("admin/view_doctor.jsp");
+			 resp.sendRedirect("admin/view_doctor.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter();
+				 * out.println("Error encountered while deleting the doctor ");
+				 */
 		}
 		
 

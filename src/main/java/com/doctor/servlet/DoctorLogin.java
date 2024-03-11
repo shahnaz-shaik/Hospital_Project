@@ -1,6 +1,7 @@
 package com.doctor.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,10 +32,16 @@ public class DoctorLogin extends HttpServlet {
 
 		if (doctor != null) {
 			session.setAttribute("doctObj", doctor);
-			resp.sendRedirect("doctor/index.jsp");
+			 resp.sendRedirect("doctor/index.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Login Successfull");
+				 */
 		} else {
 			session.setAttribute("errorMsg", "invalid email or password");
-			resp.sendRedirect("doctor_login.jsp");
+			 resp.sendRedirect("doctor_login.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Invalid email or password");
+				 */
 		}
 
 	}

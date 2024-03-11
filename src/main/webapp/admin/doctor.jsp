@@ -102,7 +102,19 @@ body {
 			</div>
 
 
-			
+			<script>
+    function registerAndSendEmail() {
+        // Submit the form to user_register servlet
+        var form = document.getElementById("registerForm");
+        form.action = "../addDoctor";
+        form.submit();
+
+        // Send email asynchronously using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "SendEmailServlet", true);
+        xhr.send(new FormData(form));
+    }
+</script>
 		</div>
 	</div>
 </body>

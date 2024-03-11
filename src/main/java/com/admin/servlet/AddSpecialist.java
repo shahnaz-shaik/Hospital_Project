@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,10 +28,16 @@ public class AddSpecialist extends HttpServlet {
 
 		if (f) {
 			session.setAttribute("succMsg", "Specialist Added");
-			resp.sendRedirect("admin/index.jsp");
+			 resp.sendRedirect("admin/index.jsp"); 
+			/*
+			 * PrintWriter out= resp.getWriter(); out.println("specialization added ");
+			 */
 		} else {
 			session.setAttribute("errorMsg", "something wrong on server");
-			resp.sendRedirect("admin/index.jsp");
+			 resp.sendRedirect("admin/index.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Specialization not added");
+				 */
 		}
 
 	}

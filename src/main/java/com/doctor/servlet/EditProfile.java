@@ -1,6 +1,7 @@
 package com.doctor.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,10 +41,18 @@ public class EditProfile extends HttpServlet {
 				Doctor updateDoctor = dao.getDoctorById(id);
 				session.setAttribute("succMsgd", "Doctor Update Sucessfully..");
 				session.setAttribute("doctObj", updateDoctor);
-				resp.sendRedirect("doctor/edit_profile.jsp");
+				 resp.sendRedirect("doctor/edit_profile.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Profile edited Successfully");
+					 */
 			} else {
 				session.setAttribute("errorMsgd", "something wrong on server");
-				resp.sendRedirect("doctor/edit_profile.jsp");
+				 resp.sendRedirect("doctor/edit_profile.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Error encountered while Updating profile");
+					 */
 			}
 
 		} catch (Exception e) {

@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,11 +26,16 @@ public class AdminLogin extends HttpServlet {
 
 			if ("admin@gmail.com".equals(email) && "admin".equals(password)) {
 				session.setAttribute("adminObj", new User());
-				resp.sendRedirect("admin/index.jsp");
+				 resp.sendRedirect("admin/index.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Login Successful");
+				 */
 			} else {
 				session.setAttribute("errorMsg", "Invalid Email or Password");
-				resp.sendRedirect("admin_login.jsp");
-			
+				 resp.sendRedirect("admin_login.jsp"); 
+				/*
+				 * PrintWriter out= resp.getWriter(); out.println("Invalid Credentials");
+				 */
 			}
 
 		} catch (Exception e) {

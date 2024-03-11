@@ -1,6 +1,7 @@
 package com.doctor.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,10 +30,18 @@ public class UpdateStatus extends HttpServlet {
 
 			if (dao.updateCommentStatus(id, did, comm)) {
 				session.setAttribute("succMsg", "Comment Updated");
-				resp.sendRedirect("doctor/patient.jsp");
+				 resp.sendRedirect("doctor/patient.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Comment updated Successfully");
+					 */
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");
-				resp.sendRedirect("doctor/patient.jsp");
+				 resp.sendRedirect("doctor/patient.jsp"); 
+					/*
+					 * PrintWriter out= resp.getWriter();
+					 * out.println("Error encountered while commenting");
+					 */
 			}
 
 		} catch (Exception e) {

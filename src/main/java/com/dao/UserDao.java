@@ -20,10 +20,6 @@ public class UserDao {
 	}
 
 	private void storeVerificationCode(String email, String verificationCode) {
-	    // Implement logic to store verification code in the database
-	    // You need to have a database table to store email and verification code
-	    // Perform appropriate database operations using JDBC or your ORM framework
-	    // For demonstration purposes, we'll assume the existence of a method in UserDao to store the code
 	    UserDao userDao = new UserDao(DBConnect.getConn());
 	    userDao.storeVerificationCode(email, verificationCode);
 	}

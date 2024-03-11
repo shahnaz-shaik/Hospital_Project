@@ -1,6 +1,7 @@
 package com.admin.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,9 +18,11 @@ public class AdminLogout extends HttpServlet {
 
 		HttpSession session = req.getSession();
 		session.removeAttribute("adminObj");
-		session.setAttribute("succMsg", "Admin Logout Sucessfully");
-		resp.sendRedirect("admin_login.jsp");
-
+		session.setAttribute("succMsg", "Admin Logout Sucessfull");
+		 resp.sendRedirect("admin_login.jsp"); 
+			/*
+			 * PrintWriter out= resp.getWriter(); out.println("Logout Successfull");
+			 */
 	}
 
 }
