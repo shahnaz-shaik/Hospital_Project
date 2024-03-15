@@ -57,6 +57,11 @@ public class UserRegister extends HttpServlet {
 					/*
 					 * PrintWriter out= resp.getWriter(); out.println("Registration Successful");
 					 */
+					/*
+					 * req.setAttribute("redirectType", "signup");
+					 * req.getRequestDispatcher("otpValidation.jsp").forward(req, resp);
+					 */
+
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");
 				 resp.sendRedirect("signup.jsp"); 
@@ -69,6 +74,8 @@ public class UserRegister extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		// After successful signup processing
+		
 		}
 		
 		private void sendOTPEmail(String userEmail, String otp) {

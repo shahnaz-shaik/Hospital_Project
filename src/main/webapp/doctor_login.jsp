@@ -37,15 +37,6 @@ body {
 							<c:remove var="errorMsg" scope="session" />
 						</c:if>
 						
-						<%-- <c:if test="${not empty succMsg }">
-							<p class="text-center text-success fs-3">${succMsg}</p>
-							<c:remove var="succMsg" scope="session" />
-						</c:if>
-
-						<c:if test="${not empty errorMsg }">
-							<p class="text-center text-danger fs-5">${errorMsg}</p>
-							<c:remove var="errorMsg" scope="session" />
-						</c:if> --%>
 						
 						<form action="doctorLogin" method="post">
 							<div class="mb-3">
@@ -56,6 +47,8 @@ body {
 								<label class="form-label">Password</label> <input required
 									name="password" type="password" class="form-control">
 							</div>
+							<a href="doctor/ForgotPassword.jsp"
+							class="text-decoration-none">Forgot Password</a>
 							<button type="submit" class="btn bg-dark text-white col-md-12">Login</button>
 						</form>
 					

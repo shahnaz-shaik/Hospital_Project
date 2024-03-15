@@ -43,6 +43,10 @@ body {
 </style>
 </head>
 <body>
+<c:if test="${empty userObj}">
+    <c:redirect url="user_login.jsp"></c:redirect>
+</c:if>
+
 	<%@include file="component/navbar.jsp"%>
 
 	<div class="container-fulid backImg p-5">
@@ -137,10 +141,6 @@ body {
 									<%
 									}
 									%>
-
-
-
-
 								</select>
 							</div>
 

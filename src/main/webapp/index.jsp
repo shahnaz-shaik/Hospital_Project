@@ -10,11 +10,25 @@
 <title>Index Page</title>
 <%@include file="component/allcss.jsp" %>
 <style type="text/css">
+body {
+    background-color: #d9d9d9; /* Change 'path/to/your/image.jpg' to the actual path of your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat;
+   
+   
+   /* Do not repeat the background image */
+  }
 .paint-card {
+	background-color: #333333;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
-
 </head>
 <body>
 
@@ -28,13 +42,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/new7.png  " class="d-block w-100" alt="..."  height="800px">
+      <img src="https://wallpaperaccess.com/full/4088661.jpg  " class="d-block w-100" alt="..."  height="800px">
     </div>
     <div class="carousel-item">
-      <img src="https://img.freepik.com/premium-photo/medical-staff-people-group-team-doctor-nurse-hospital-healthcare-medicine-ai_592076-1377.jpg?w=740" class="d-block w-100" alt="..." height="800px">
+      <img src="https://wallpaperaccess.com/full/6369949.jpg" class="d-block w-100" alt="..." height="800px">
     </div>
     <div class="carousel-item">
-      <img src="img/new2.jpg" class="d-block w-100" alt="..." height="800px">
+      <img src="https://wallpaperaccess.com/full/5004791.jpg" class="d-block w-100" alt="..." height="800px">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -47,13 +61,13 @@
   </button>
 </div>
 <div class="container p-3">
-		<p class="text-center fs-2 ">Key Features of our Hospital</p>
+		<p class="text-center fs-2 text-black">Key Features of our Hospital</p>
 
-		<div class="row">
+		<div class="row centered">
 			<div class="col-md-8 p-5">
 				<div class="row">
 					<div class="col-md-6">
-						<div class="card paint-card">
+						<div class="card paint-card text-white">
 							<div class="card-body">
 								<p class="fs-5">100% Safety</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -62,7 +76,7 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="card paint-card">
+						<div class="card paint-card text-white">
 							<div class="card-body">
 								<p class="fs-5">Clean Environment</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -71,7 +85,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 mt-2">
-						<div class="card paint-card">
+						<div class="card paint-card text-white">
 							<div class="card-body">
 								<p class="fs-5">Friendly Doctors</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -80,7 +94,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 mt-2">
-						<div class="card paint-card">
+						<div class="card paint-card text-white">
 							<div class="card-body">
 								<p class="fs-5">Medical Research</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -90,20 +104,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<img alt="" src="img/hos7.jpg" height="345px">
-			</div>
+			
 		</div>
 	</div>	
 	
 	<hr>
 
 	<div class="container p-2">
-		<p class="text-center fs-2 ">Our Team</p>
+		<p class="text-center fs-2 text-black ">Our Team</p>
 		
 		<div class="row">
 			<div class="col-md-3">
-				<div class="card paint-card">
+				<div class="card paint-card text-white">
 					<div class="card-body text-center">
 						<img src="img/doc4.jpg" width="250px" height="300px">
 						<p class="fw-bold fs-5">Samuani Simi</p>
@@ -113,7 +125,7 @@
 			</div>
 
 			<div class="col-md-3">
-				<div class="card paint-card">
+				<div class="card paint-card text-white">
 					<div class="card-body text-center">
 						<img src="img/doc1.jpg" width="250px" height="300px">
 						<p class="fw-bold fs-5">Dr.Siva Kumar</p>
@@ -123,7 +135,7 @@
 			</div>
 
 			<div class="col-md-3">
-				<div class="card paint-card">
+				<div class="card paint-card text-white">
 					<div class="card-body text-center">
 						<img src="img/doc2.jpg" width="250px" height="300px">
 						<p class="fw-bold fs-5">Dr. Niuise Paule</p>
@@ -133,7 +145,7 @@
 			</div>
 
 			<div class="col-md-3">
-				<div class="card paint-card">
+				<div class="card paint-card text-white">
 					<div class="card-body text-center">
 						<img src="img/doc3.jpg" width="250px" height="300px">
 						<p class="fw-bold fs-5">Dr. Mathue Samuel</p>

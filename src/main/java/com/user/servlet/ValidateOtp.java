@@ -34,10 +34,11 @@ public class ValidateOtp extends HttpServlet {
             PrintWriter out= response.getWriter();
     		out.println("Very bad");
         }
-
-		
-		  request.getRequestDispatcher("otpValidation.jsp").forward(request,
-		  response);
-		 
-           }
+		/*
+		 * request.getRequestDispatcher("otpValidation.jsp").forward(request, response);
+		 */
+        
+            request.getRequestDispatcher("otpValidation.jsp").forward(request, response);
+        }
+    
 }

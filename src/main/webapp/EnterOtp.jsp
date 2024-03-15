@@ -58,7 +58,7 @@
 									<div class="form-group">
 										<input name="recover-submit"
 											class="btn btn-lg btn-primary btn-block"
-											value="Submit" type="submit">
+											value="Submit" type="submit" >
 									</div>
 
 									<input type="hidden" class="hide" name="token" id="token"
@@ -72,5 +72,6 @@
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>

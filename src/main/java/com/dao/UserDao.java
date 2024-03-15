@@ -100,6 +100,26 @@ public User login(String em, String psw) {
 
 	return u;
 }
+public boolean forgotpass(String em) {
+	boolean f = false;
+
+	try {
+		String sql = "select * from user_dtls where email=?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, em);
+	
+
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+			f = true;
+		}
+
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+
+	return f;
+}
 
 public boolean checkOldPassword(int userid, String oldPassword) {
 	boolean f = false;
@@ -130,6 +150,26 @@ public boolean changePassword(int userid, String newPassword) {
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setString(1, newPassword);
 		ps.setInt(2, userid);
+
+		int i = ps.executeUpdate();
+		if (i == 1) {
+			f = true;
+		}
+
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+
+	return f;
+}
+public boolean newPassword(String email, String newPassword) {
+	boolean f = false;
+
+	try {
+		String sql = "update user_dtls set password=? where email=?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, newPassword);
+		ps.setString(2, email);
 
 		int i = ps.executeUpdate();
 		if (i == 1) {

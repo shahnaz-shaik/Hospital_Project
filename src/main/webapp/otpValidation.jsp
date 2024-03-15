@@ -29,7 +29,7 @@
         <% if ("success".equals(request.getAttribute("validationStatus"))) { %>
             <p>OTP validation successful. You can proceed.</p>
             <!-- Button for redirection -->
-            <button class="btn" onclick="redirectToLoginPage()">Proceed to Login</button>
+            <button class="btn" onclick="redirectToPage()">Proceed to login</button>
         <% } else { %>
             <p>OTP validation failed. Please try again.</p>
         <% } %>
@@ -37,9 +37,10 @@
 
     <!-- JavaScript function to redirect to login.jsp -->
     <script>
-        function redirectToLoginPage() {
+    function redirectToPage() {
+        
             window.location.href = "user_login.jsp";
-        }
+    }
     </script>
 </body>
 </html>

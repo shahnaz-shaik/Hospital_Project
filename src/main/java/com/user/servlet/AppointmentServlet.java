@@ -1,6 +1,7 @@
 package com.user.servlet;
 
 import java.io.IOException;
+import com.entity.*;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.dao.AppointmentDAO;
 import com.db.DBConnect;
 import com.entity.Appointment;
+import com.entity.User;
 
 @WebServlet("/appAppointment")
 public class AppointmentServlet extends HttpServlet {
@@ -38,10 +40,14 @@ public class AppointmentServlet extends HttpServlet {
 
 		AppointmentDAO dao = new AppointmentDAO(DBConnect.getConn());
 		HttpSession session = req.getSession();
+		User user = (User) session.getAttribute("userObj");
+		int userIdFromSession = user.getId();
 
-		if (dao.addAppointment(ap)) {
-			session.setAttribute("succMsg", "Appointment Sucessfull");
-			 resp.sendRedirect("user_appointment.jsp"); 
+		if (userIdFromSession != userId) {
+			 resp.sendRedirect("user_login.jsp");
+		} else if (dao.addAppointment(ap)) {
+					session.setAttribute("succMsg", "Appointment Sucessfull");
+					resp.sendRedirect("user_appointment.jsp"); 
 			/*
 			 * PrintWriter out= resp.getWriter(); out.println("Appointment Successfull");
 			 */
@@ -55,5 +61,4 @@ public class AppointmentServlet extends HttpServlet {
 		}
 
 	}
-
-}
+	}

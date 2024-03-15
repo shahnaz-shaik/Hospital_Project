@@ -66,7 +66,7 @@
         </div>
     </div>
 </div>
-
+<!-- 
 <script>
     function registerAndSendEmail() {
         // Submit the form to user_register servlet
@@ -79,7 +79,7 @@
         xhr.open("POST", "SendEmailServlet", true);
         xhr.send(new FormData(form));
     }
-</script>
+</script> -->
 
 </body>
 </html>

@@ -52,9 +52,13 @@ body {
 								<label class="form-label">Password</label> <input required
 									name="password" type="password" class="form-control">
 							</div>
+							 <a href="ForgotPassword.jsp"
+							class="text-decoration-none">Forgot Password</a>
+						
 
 							<button type="submit" class="btn bg-dark text-white col-md-12">Login</button>
 						</form>
+						
 
 						<br> Don't have an account? <a href="signup.jsp"
 							class="text-decoration-none"> create one</a>

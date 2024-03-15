@@ -331,5 +331,51 @@ public class DoctorDao {
 
 		return f;
 	}
+	public boolean forgotpass(String em) {
+		boolean f = false;
+
+		try {
+			String sql = "select * from doctor where email=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, em);
+		
+
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
+	}
+	public boolean newPassword(String email, String newPassword) {
+		boolean f = false;
+
+		try {
+			String sql = "update doctor set password=? where email=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, newPassword);
+			ps.setString(2, email);
+
+			
+			  int i = ps.executeUpdate();
+			  if (i == 1) {
+				  f = true;
+				  }
+			 
+
+			/*
+			 * int rowsAffected = ps.executeUpdate(); if (rowsAffected > 0) { f = true; }
+			 */
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
+	}
+
 
 }
