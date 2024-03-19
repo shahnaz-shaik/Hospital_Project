@@ -14,11 +14,13 @@
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 body {
-    background-image: url('https://getwallpapers.com/wallpaper/full/8/0/f/7125.jpg'); 
+    background-image: url('https://cdn.pixabay.com/photo/2018/09/05/16/33/dna-3656587_1280.jpg'); 
     background-size: cover; 
     
     background-position: center; 
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     
     
    
   }

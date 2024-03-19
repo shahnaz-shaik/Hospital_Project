@@ -1,6 +1,5 @@
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\doctor\servlet\ForgotPassword.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\entity\Appointment.java
-C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\email\ValidateOtp.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\dao\AppointmentDAO.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\dao\SpecialistDao.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\doctor\servlet\ForgotPassOtp.java
@@ -24,7 +23,6 @@ C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\user\servlet
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\user\servlet\UserRegister.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\user\servlet\ValidateOtp.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\doctor\servlet\DocotrPasswordChange.java
-C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\email\SendEmail.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\doctor\servlet\DoctorLogout.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\doctor\servlet\DoctorLogin.java
 C:\Users\shahnaz_shaik\eclipse2\Hospital_System_2\src\main\java\com\entity\Specialist.java

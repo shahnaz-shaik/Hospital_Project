@@ -8,13 +8,15 @@
 <%@include file="component/allcss.jsp" %>
 <style type="text/css">
 body {
-    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true');
+ 	background-color: #333333; 
+    /* background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); */
     background-size: cover; 
     background-position: center;
     background-repeat: repeat;
    
   }
 .paint-card {
+ background-color: #d9d9d9; 
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>

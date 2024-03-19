@@ -9,16 +9,15 @@
 <%@include file="component/allcss.jsp"%>
 <style type="text/css">
     body {
-        background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true');
-        /* Change 'path/to/your/image.jpg' to the actual path of your image */
+   		 background-color: #333333; 
+        /* background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); */
         background-size: cover;
-        /* Cover the entire background */
         background-position: center;
-        /* Center the background image */
         background-repeat: repeat;
     }
 
     .paint-card {
+    background-color: #d9d9d9; 
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     }
 </style>
@@ -66,20 +65,9 @@
         </div>
     </div>
 </div>
-<!-- 
-<script>
-    function registerAndSendEmail() {
-        // Submit the form to user_register servlet
-        var form = document.getElementById("registerForm");
-        form.action = "user_register";
-        form.submit();
 
-        // Send email asynchronously using AJAX
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "SendEmailServlet", true);
-        xhr.send(new FormData(form));
-    }
-</script> -->
+
+
 
 </body>
 </html>

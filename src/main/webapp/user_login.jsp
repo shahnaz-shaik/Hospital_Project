@@ -8,16 +8,17 @@
 <meta charset="UTF-8">
 <title>User Login Page</title>
 <%@include file="component/allcss.jsp" %>
-<script  src="main.js" defer type="module"> </script>
 <style type="text/css">
 body {
-    background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+  /*   background-image: url('https://github.com/opprDev/medical-image-downloader/blob/master/assets/banner_1280x640.png?raw=true'); */
+  background-color: #333333; 
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: repeat;
    /* Do not repeat the background image */
   }
 .paint-card {
+	background-color: #d9d9d9; 
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
@@ -67,11 +68,7 @@ body {
 					
 					
 				</div>
-				<div class="input">
-					<button id="google-login-btn" class="google-button">
-						<i class="fab fa-google"></i> Login with Google
-					</button>
-					</div>
+				
 			</div>
 		</div>
 	</div>

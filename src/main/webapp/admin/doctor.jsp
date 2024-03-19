@@ -12,13 +12,14 @@
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 body {
-    background-image: url('https://getwallpapers.com/wallpaper/full/9/1/4/7142.jpg'); 
+    background-image: url('https://cdn.pixabay.com/photo/2022/03/27/08/46/medicine-7094412_1280.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: repeat;
    
   }
 .paint-card {
+background-color: #d9d9d9; 
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
@@ -102,7 +103,7 @@ body {
 			</div>
 
 
-			<script>
+		<!-- 	<script>
     function registerAndSendEmail() {
         // Submit the form to user_register servlet
         var form = document.getElementById("registerForm");
@@ -114,7 +115,7 @@ body {
         xhr.open("POST", "SendEmailServlet", true);
         xhr.send(new FormData(form));
     }
-</script>
+</script> -->
 		</div>
 	</div>
 </body>

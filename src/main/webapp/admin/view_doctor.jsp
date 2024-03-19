@@ -14,11 +14,16 @@
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 body {
-    background-image: url('https://getwallpapers.com/wallpaper/full/8/0/f/7125.jpg'); 
+    background-image: url('https://cdn.pixabay.com/photo/2022/03/27/08/46/medicine-7094412_1280.jpg'); 
+     background-size: 100%;
     background-size: cover; 
-    
     background-position: center; 
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
+    background-attachment: fixed; /* Fix the background image in place */
+    
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100%;
     
    
   }
